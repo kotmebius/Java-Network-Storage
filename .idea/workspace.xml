@@ -4,7 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50a6a6ae-b9d6-43e9-a585-28c1b6943fed" name="Default Changelist" comment="BeforeNetty" />
+    <list default="true" id="50a6a6ae-b9d6-43e9-a585-28c1b6943fed" name="Default Changelist" comment="BeforeNetty">
+      <change afterPath="$PROJECT_DIR$/CloudClient/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CloudServer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/BaseNettyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/AuthMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/AuthResultMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/ChangeStructureMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/CloudMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/CommandType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/FileMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/FileRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/ListMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/ListRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/login1/123/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/login1/StartAllBack.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/login1/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/login1/object.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.db" beforeDir="false" afterPath="$PROJECT_DIR$/main.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudClient/src/main/java/CloudClient/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/AuthWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudClient/src/main/java/CloudClient/AuthWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudClient/src/main/java/CloudClient/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/CloudServerNettyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/Sender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/CloudNettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/geekbrains/cloud/jan/AuthLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudClient/src/main/resources/AuthLayout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/geekbrains/cloud/jan/layout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudClient/src/main/resources/layout.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +47,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -23,8 +58,17 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="241FgGZMv2xk2uGzHlca45AqkLF" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,22 +81,27 @@
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../maven-assembly-plugin-master.zip" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\files\Java\GeekBrains\Java NS\Lesson1\HomeWork\JavaNS\src\main\resources\com\geekbrains\cloud\jan" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/geekbrains/cloud/jan" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\files\Java\GeekBrains\Java NS\HomeWork\JavaNS\Java Network Storage\Client\src\main\resources" />
+      <recent name="D:\files\Java\GeekBrains\Java NS\HomeWork\JavaNS\Java Network Storage\Client\src" />
+      <recent name="D:\files\Java\GeekBrains\Java NS\HomeWork\JavaNS\Java Network Storage\Client\resources" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Server">
+  <component name="RunManager" selected="Application.App">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -64,12 +113,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.cloud.jan.App" />
-      <module name="cloud-storage" />
+    <configuration name="App" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="CloudClient.App" />
+      <module name="CloudClient" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geekbrains.cloud.jan.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,12 +141,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NioExamples" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.cloud.jan.nio.NioExamples" />
-      <module name="cloud-storage" />
+    <configuration name="CloudNettyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CloudServer.CloudNettyServer" />
+      <module name="CloudServer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geekbrains.cloud.jan.nio.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,12 +154,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.cloud.jan.Server" />
+    <configuration name="NioExamples" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.cloud.jan.nio.NioExamples" />
       <module name="cloud-storage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geekbrains.cloud.jan.*" />
+          <option name="PATTERN" value="com.geekbrains.cloud.jan.nio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,8 +182,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Server" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.CloudNettyServer" />
         <item itemvalue="Application.Buffers" />
         <item itemvalue="Application.NioExamples" />
         <item itemvalue="Application.TestSerialization" />
@@ -172,32 +223,47 @@
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/Handler.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/Client.java</url>
-          <line>105</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/Client.java</url>
-          <line>68</line>
+          <url>file://$PROJECT_DIR$/CloudClient/src/main/java/CloudClient/Client.java</url>
+          <line>95</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/AuthService.java</url>
+          <url>file://$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/AuthService.java</url>
           <line>60</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/CloudServerNettyHandler.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Core/src/main/java/CloudMessage/FileMessage.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/CloudClient/src/main/java/CloudClient/Client.java</url>
+          <line>230</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/CloudClient/src/main/java/CloudClient/AuthWindow.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
