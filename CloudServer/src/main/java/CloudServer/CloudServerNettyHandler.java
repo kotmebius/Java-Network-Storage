@@ -1,15 +1,15 @@
 package CloudServer;
 
 import CloudMessage.CloudMessage;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
 
 
 import CloudMessage.*;
@@ -18,6 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 import static java.nio.file.Files.isDirectory;
 
 @Slf4j
+@ChannelHandler.Sharable
 public class CloudServerNettyHandler extends SimpleChannelInboundHandler<CloudMessage> {
 
     //    Константы результата авторизации
@@ -53,17 +54,25 @@ public class CloudServerNettyHandler extends SimpleChannelInboundHandler<CloudMe
                 processAuthMessage((AuthMessage) cloudMessage, ctx);
                 break;
             case FILE_REQUEST:
-                processFileRequest((FileRequest) cloudMessage, ctx);
+                if (isAuth) {
+                    processFileRequest((FileRequest) cloudMessage, ctx);
+                }
                 break;
             case FILE:
-                processFileMessage((FileMessage) cloudMessage);
-                sendList(ctx);
+                if (isAuth) {
+                    processFileMessage((FileMessage) cloudMessage);
+                    sendList(ctx);
+                }
                 break;
             case LIST_REQUEST:
-                processListRequest((ListRequest) cloudMessage, ctx);
+                if (isAuth){
+                    processListRequest((ListRequest) cloudMessage, ctx);
+                }
                 break;
             case CHANGE_STRUCTURE:
-                processChangeStructureRequest((ChangeStructureMessage) cloudMessage, ctx);
+                if (isAuth){
+                    processChangeStructureRequest((ChangeStructureMessage) cloudMessage, ctx);
+                }
                 break;
         }
     }
@@ -75,12 +84,6 @@ public class CloudServerNettyHandler extends SimpleChannelInboundHandler<CloudMe
         ctx.close();
     }
 
-    @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        log.info("Клиент отвалился");
-        ctx.close();
-
-    }
 
     private void sendList(ChannelHandlerContext ctx) throws IOException {
         ctx.writeAndFlush(new ListMessage(clientDir));
@@ -108,15 +111,39 @@ public class CloudServerNettyHandler extends SimpleChannelInboundHandler<CloudMe
 
     private void processFileMessage(FileMessage cloudMessage) throws IOException {
         if (!cloudMessage.isDir()) {
-            Files.write(clientDir.resolve(cloudMessage.getFileName()), cloudMessage.getBytes());
+            Files.write(clientDir.resolve(cloudMessage.getFileName()), cloudMessage.getBytes(),StandardOpenOption.CREATE_NEW);
         } else {
             Files.createDirectory(clientDir.resolve(cloudMessage.getFileName()));
         }
     }
 
+
+
     private void processFileRequest(FileRequest cloudMessage, ChannelHandlerContext ctx) throws IOException {
         Path path = clientDir.resolve(cloudMessage.getFileName());
-        ctx.writeAndFlush(new FileMessage(path));
+        upload(path, ctx);
+    }
+
+    private void upload(Path pathToUpload, ChannelHandlerContext ctx) throws IOException {
+        ctx.writeAndFlush(new FileMessage(pathToUpload, clientDir));
+        if (isDirectory(pathToUpload)) {
+            Files.newDirectoryStream(pathToUpload)
+                    .forEach(f -> {
+                        if (Files.isDirectory(f)) {
+                            try {
+                                upload(f, ctx);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        } else {
+                            try {
+                                ctx.writeAndFlush(new FileMessage(f, clientDir));
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
+        }
     }
 
     private void processListRequest(ListRequest cloudMessage, ChannelHandlerContext ctx) throws IOException {
@@ -175,25 +202,23 @@ public class CloudServerNettyHandler extends SimpleChannelInboundHandler<CloudMe
         delete(oldName);
     }
 
-    private void delete (Path pathToDelete){
+    private void delete(Path pathToDelete) {
         try {
-            if (isDirectory(pathToDelete)) {
-                Files.newDirectoryStream(pathToDelete)
-                        .forEach(f -> {
-                            if (Files.isDirectory(f)){
-                                delete(f);
-                            } else {
-                                try {
-                                    Files.delete(f);
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        });
-            }
-            Files.delete(pathToDelete);
-        } catch (IOException ex) {
-            log.error(ex.getMessage());
+            Files.walkFileTree(pathToDelete, new SimpleFileVisitor<Path>() {
+                @Override
+                public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+                    Files.delete(file);
+                    return FileVisitResult.CONTINUE;
+                }
+
+                @Override
+                public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+                    Files.delete(dir);
+                    return FileVisitResult.CONTINUE;
+                }
+            });
+        } catch(IOException e){
+            e.printStackTrace();
         }
     }
 }

@@ -2,9 +2,8 @@ package CloudClient;
 
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ResourceBundle;
 
 import CloudMessage.CloudMessage;
@@ -98,7 +97,7 @@ public class Client implements Initializable {
             e.printStackTrace();
         } finally {
             Platform.runLater(() -> {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("AuthLayout.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/AuthLayout.fxml"));
                 Stage stage = (Stage) clientView.getScene().getWindow();
                 try {
                     stage.setScene(new Scene((Pane) loader.load()));
@@ -133,7 +132,7 @@ public class Client implements Initializable {
     }
 
     private void upload(Path pathToUpload) throws IOException {
-        os.writeObject(new FileMessage(pathToUpload));
+        os.writeObject(new FileMessage(pathToUpload, clientDir));
         if (isDirectory(pathToUpload)) {
             Files.newDirectoryStream(pathToUpload)
                     .forEach(f -> {
@@ -145,7 +144,7 @@ public class Client implements Initializable {
                             }
                         } else {
                             try {
-                                os.writeObject(new FileMessage(f));
+                                os.writeObject(new FileMessage(f, clientDir));
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
@@ -159,6 +158,8 @@ public class Client implements Initializable {
     public void downloadButton(ActionEvent actionEvent) throws IOException {
         String fileName = serverView.getSelectionModel().getSelectedItem();
         os.writeObject(new FileRequest(fileName));
+
+
     }
 
     private void initMouseListeners() {
@@ -296,23 +297,21 @@ public class Client implements Initializable {
 
     private void delete(Path pathToDelete) {
         try {
-            if (isDirectory(pathToDelete)) {
-                Files.newDirectoryStream(pathToDelete)
-                        .forEach(f -> {
-                            if (Files.isDirectory(f)) {
-                                delete(f);
-                            } else {
-                                try {
-                                    Files.delete(f);
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        });
-            }
-            Files.delete(pathToDelete);
-        } catch (IOException ex) {
-            log.error(ex.getMessage());
+            Files.walkFileTree(pathToDelete, new SimpleFileVisitor<Path>() {
+                @Override
+                public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+                    Files.delete(file);
+                    return FileVisitResult.CONTINUE;
+                }
+
+                @Override
+                public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+                    Files.delete(dir);
+                    return FileVisitResult.CONTINUE;
+                }
+            });
+        } catch(IOException e){
+            e.printStackTrace();
         }
     }
 

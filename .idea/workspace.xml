@@ -5,39 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50a6a6ae-b9d6-43e9-a585-28c1b6943fed" name="Default Changelist" comment="BeforeNetty">
-      <change afterPath="$PROJECT_DIR$/CloudClient/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CloudServer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/BaseNettyServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/AuthMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/AuthResultMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/ChangeStructureMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/CloudMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/CommandType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/FileMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/FileRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/ListMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/ListRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/login1/123/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/login1/StartAllBack.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/login1/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/login1/object.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudClient/src/main/java/CloudClient/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudClient/src/main/java/CloudClient/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudClient/src/main/resources/AuthLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudClient/src/main/resources/AuthLayout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudClient/src/main/resources/layout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudClient/src/main/resources/layout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudClient/target/classes/CloudClient/Client$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/CloudClient/target/classes/CloudClient/Client$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudClient/target/classes/CloudClient/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/CloudClient/target/classes/CloudClient/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudClient/target/classes/layout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudClient/target/classes/layout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/BaseNettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/BaseNettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/CloudNettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/CloudNettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/CloudServerNettyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/CloudServerNettyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudServer/target/classes/CloudServer/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/CloudServer/target/classes/CloudServer/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudServer/target/classes/CloudServer/BaseNettyServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/CloudServer/target/classes/CloudServer/BaseNettyServer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudServer/target/classes/CloudServer/BaseNettyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/CloudServer/target/classes/CloudServer/BaseNettyServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudServer/target/classes/CloudServer/CloudNettyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/CloudServer/target/classes/CloudServer/CloudNettyServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudServer/target/classes/CloudServer/CloudServerNettyHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/CloudServer/target/classes/CloudServer/CloudServerNettyHandler$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudServer/target/classes/CloudServer/CloudServerNettyHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/CloudServer/target/classes/CloudServer/CloudServerNettyHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/FileMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/FileMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/Sender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/classes/CloudMessage/FileMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/classes/CloudMessage/FileMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/classes/CloudMessage/Sender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/login1/ntuser" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.db" beforeDir="false" afterPath="$PROJECT_DIR$/main.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudClient/src/main/java/CloudClient/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/AuthWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudClient/src/main/java/CloudClient/AuthWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudClient/src/main/java/CloudClient/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/CloudServerNettyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/CloudMessage/Sender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/CloudNettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/geekbrains/cloud/jan/AuthLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudClient/src/main/resources/AuthLayout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/geekbrains/cloud/jan/layout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudClient/src/main/resources/layout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/nio/Buffers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/nio/NioExamples.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/nio/Watcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/serial/TestSerialization.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/cloud/jan/serial/TransferObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/geekbrains/cloud/jan/log4j2.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +124,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BaseNettyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CloudServer.BaseNettyServer" />
+      <module name="CloudServer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CloudServer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Buffers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geekbrains.cloud.jan.nio.Buffers" />
       <module name="cloud-storage" />
@@ -167,26 +176,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSerialization" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.cloud.jan.serial.TestSerialization" />
-      <module name="cloud-storage" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geekbrains.cloud.jan.serial.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.BaseNettyServer" />
         <item itemvalue="Application.CloudNettyServer" />
         <item itemvalue="Application.Buffers" />
         <item itemvalue="Application.NioExamples" />
-        <item itemvalue="Application.TestSerialization" />
       </list>
     </recent_temporary>
   </component>
@@ -230,34 +226,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CloudClient/src/main/java/CloudClient/Client.java</url>
-          <line>95</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/AuthService.java</url>
           <line>60</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/CloudServer/src/main/java/CloudServer/CloudServerNettyHandler.java</url>
-          <line>89</line>
+          <line>92</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Core/src/main/java/CloudMessage/FileMessage.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/CloudClient/src/main/java/CloudClient/Client.java</url>
-          <line>230</line>
+          <line>231</line>
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CloudClient/src/main/java/CloudClient/AuthWindow.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

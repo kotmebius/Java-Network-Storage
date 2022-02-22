@@ -8,13 +8,16 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.serialization.ClassResolvers;
+import io.netty.handler.codec.serialization.ObjectDecoder;
+import io.netty.handler.codec.serialization.ObjectEncoder;
 
 public class BaseNettyServer {
     private static final String SERVER="localhost";
     private static final int PORT=8189;
 
 
-    public BaseNettyServer(ChannelHandler ... handlers) {
+    public BaseNettyServer() {
         EventLoopGroup auth = new NioEventLoopGroup(1);
         EventLoopGroup worker = new NioEventLoopGroup();
         try {
@@ -24,7 +27,9 @@ public class BaseNettyServer {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
-                            socketChannel.pipeline().addLast(handlers);
+                            socketChannel.pipeline().addLast(new ObjectDecoder(ClassResolvers.cacheDisabled(null)),
+                                    new ObjectEncoder(),
+                                    new CloudServerNettyHandler());
                         }
                     });
             ChannelFuture future = bootstrap.bind(PORT).sync();
@@ -36,5 +41,9 @@ public class BaseNettyServer {
             auth.shutdownGracefully();
             worker.shutdownGracefully();
         }
+    }
+
+    public static void main(String[] args) {
+        new BaseNettyServer();
     }
 }

@@ -13,8 +13,9 @@ public class FileMessage implements CloudMessage {
     private final byte[] bytes;
     private final boolean isDir;
 
-    public FileMessage(Path path) throws IOException {
-        fileName = path.getFileName().toString();
+    public FileMessage(Path path, Path rootPath) throws IOException {
+        fileName = rootPath.relativize(path).toString();
+        //                path.getFileName().toString();
         isDir=Files.isDirectory(path);
         if (!isDir) {
             bytes = Files.readAllBytes(path);

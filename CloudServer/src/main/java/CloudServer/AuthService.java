@@ -11,7 +11,7 @@ public class AuthService {
     private static final int AUTH_FAIL = 1;
     private static final int USER_LOCKED = 2;
     private static final int NO_USER = 3;
-    private static final int TIME_TO_LOCK = 30000;
+    private static final int TIME_TO_LOCK = 300000;
     private static final int MAX_TRY_TO_AUTH = 3;
 
     public static void connect() {

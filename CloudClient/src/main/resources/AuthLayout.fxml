@@ -3,9 +3,15 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CloudClient.AuthWindow">
-    <Label fx:id="authMessage" layoutX="14.0" layoutY="14.0" prefHeight="14.0" prefWidth="572.0" text="Пожалуйста авторизуйтесь" />
-    <TextField fx:id="login" layoutX="14.0" layoutY="42.0" prefWidth="253.0" promptText="Введите логин (login1)" text="login1" />
-    <PasswordField fx:id="password" layoutX="333.0" layoutY="42.0" prefWidth="253.0" promptText="Введите пароль (pass1)" text="pass1" />
-    <Button fx:id="authButton" layoutX="14.0" layoutY="84.0" mnemonicParsing="false" onAction="#tryToAuth" prefHeight="14.0" prefWidth="572.0" text="Авторизоваться" />
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="CloudClient.AuthWindow">
+    <Label fx:id="authMessage" layoutX="14.0" layoutY="14.0" prefHeight="14.0" prefWidth="572.0"
+           text="Пожалуйста авторизуйтесь"/>
+    <TextField fx:id="login" layoutX="14.0" layoutY="42.0" prefWidth="253.0" promptText="Введите логин (login1)"
+               text="login1"/>
+    <PasswordField fx:id="password" layoutX="333.0" layoutY="42.0" prefWidth="253.0" promptText="Введите пароль (pass1)"
+                   text="pass1"/>
+    <Button fx:id="authButton" layoutX="14.0" layoutY="84.0" mnemonicParsing="false" onAction="#tryToAuth"
+            prefHeight="14.0" prefWidth="572.0" text="Авторизоваться"/>
 </AnchorPane>
